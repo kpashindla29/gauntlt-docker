@@ -13,7 +13,7 @@ clean-all: clean
 	@docker rmi gauntlt
 
 interactive:
-	@docker run --rm -it --entrypoint /bin/bash gauntlt
+	@docker run --rm -it --add-host=host.docker.internal:host-gateway --entrypoint /bin/bash gauntlt
 
 install-stub:
 	@echo "installing gauntlt-docker to /usr/local/bin"
